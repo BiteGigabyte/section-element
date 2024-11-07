@@ -5,6 +5,8 @@ function chooseLabel(button, number) {
     activeInput[0].classList.remove(`active-input-step-${number}`);
     button.classList.add(`active-input-step-${number}`);
 
+    console.log(`step ${number}`);
+
 }
 
 function prevStep() {
