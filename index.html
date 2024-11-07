@@ -84,6 +84,13 @@
             background-color: green;
         }
 
+        .active-input-step-3 {
+            background-color: green;
+        }
+
+        .active-input-step-4 {
+            background-color: green;
+        }
 
         button {
             margin-top: 20px;
@@ -178,35 +185,30 @@
     </div>
 
     <div id="step-3" class="step disabled-block">
-        <h2>Step 3</h2>
-        <label>
-            Choose Option 3:
-            <input type="radio" name="option3" value="Option 3A" checked> Option 3A
-            <input type="radio" name="option3" value="Option 3A"> Option 3A
-            <input type="radio" name="option3" value="Option 3A"> Option 3B
-        </label>
+        <h2>Вы знаете, что конкретно вышло из строя?</h2>
+        <div>
+            <button class="active-input-step-3" type="button" name="option3" value="Option 3A" onclick="chooseLabel(this, 3)">
+                <img src="step3_images/ar-6.svg" alt="ar-6">Блок питания</button>
+                <button type="button" name="option3" value="Option 3A" onclick="chooseLabel(this, 3)"><img src="step3_images/ar-6.svg" alt="ar-6">Сбой в Windows / MacOS</button>
+                <button type="button" name="option3" value="Option 3A" onclick="chooseLabel(this, 3)"><img src="step3_images/ar-6.svg" alt="ar-6">Вирусное заражение</button>
+                <button type="button" name="option3" value="Option 3A" onclick="chooseLabel(this, 3)"><img src="step3_images/ar-6.svg" alt="ar-6">Требуется чистка</button>
+                <button type="button" name="option3" value="Option 3A" onclick="chooseLabel(this, 3)"><img src="step3_images/ar-6.svg" alt="ar-6">Сбой в настройках ОС</button>
+                <button type="button" name="option3" value="Option 3A" onclick="chooseLabel(this, 3)"><img src="step3_images/ar-6.svg" alt="ar-6">Жесткий диск</button>
+                <button type="button" name="option3" value="Option 3A" onclick="chooseLabel(this, 3)"><img src="step3_images/ar-6.svg" alt="ar-6">Не знаю</button>
+        </div>
     </div>
 
     <div id="step-4" class="step disabled-block">
-        <h2>Step 4</h2>
-        <label>
-            Choose Option 4:
-            <input type="radio" name="option4" value="Option 4A" checked> Option 4A
-            <input type="radio" name="option4" value="Option 4A"> Option 4A
-            <input type="radio" name="option4" value="Option 4A"> Option 4B
-            <input type="radio" name="option4" value="Option 4A"> Option 4C
-            <input type="radio" name="option4" value="Option 4A"> Option 4D
-        </label>
+        <h2>Сколько лет вашему устройству?</h2>
+        <div>
+            <button class="active-input-step-4" type="button" name="option4" value="Option 4A" onclick="chooseLabel(this, 4)"><img src="step3_images/ar-6.svg" alt="ar-6">ДО 2-Х ЛЕТ</button>
+            <button type="button" name="option4" value="Option 4A" onclick="chooseLabel(this, 4)"><img src="step3_images/ar-6.svg" alt="ar-6">ОТ 2-Х ДО 5 ЛЕТ</button>
+            <button type="button" name="option4" value="Option 4A" onclick="chooseLabel(this, 4)"><img src="step3_images/ar-6.svg" alt="ar-6">БОЛЬШЕ 5 ЛЕТ</button>
+        </div>
     </div>
 
     <div id="step-5" class="step disabled-block">
-        <h2>Step 5</h2>
-        <label>
-            Choose Option 5:
-            <input type="radio" name="option5" value="Option 5A" checked> Option 5A
-            <input type="radio" name="option5" value="Option 5A"> Option 5B
-            <input type="radio" name="option5" value="Option 5A"> Option 5C
-        </label>
+        <h2>Последний шаг, перед тем, как мы рассчитаем стоимость ремонта</h2>
     </div>
 
 
