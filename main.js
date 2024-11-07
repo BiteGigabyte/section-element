@@ -12,7 +12,7 @@ function chooseLabel(button, number) {
 function prevStep() {
     const steps = document.querySelectorAll('.progress-step');
     const lines = document.querySelectorAll('.progress-line');
-    let buttonBack = document.querySelectorAll('.disabled-back-button');
+    let buttonBack = document.querySelectorAll('.disabled-button');
     const buttonsContainer = document.querySelectorAll('.buttons-container');
     const nextStepBlock = document.querySelectorAll('.disabled-block');
     const showStepBlock = document.querySelectorAll('.active-block');
@@ -25,9 +25,9 @@ function prevStep() {
     steps[currentStep].classList.remove('active');
     // Додаємо клас "active" для лінії між кроками
         lines[currentStep - 1].classList.remove('active');
-    // Додаємо active-back-button клас до кнопки Назад
+    // Додаємо active-button клас до кнопки Назад
     // if (buttonBack) {
-    //     buttonBack[0].classList.add('active-back-button')
+    //     buttonBack[0].classList.add('active-button')
     // }
         showStepBlock[0].classList.add('disabled-block');
         showStepBlock[0].classList.remove('active-block');
@@ -40,16 +40,21 @@ function prevStep() {
         if (currentStep === 1) {
             // currentStep--;
 
-            buttonBack = document.querySelectorAll('.disabled-back-button');
-            buttonBack[0].classList.remove('active-back-button');
-            buttonBack[0].classList.add('disabled-back-button');
+            buttonBack = document.querySelectorAll('.disabled-button');
+            buttonBack[0].classList.remove('active-button');
+            buttonBack[0].classList.add('disabled-button');
 
             buttonsContainer[0].style.justifyContent = 'center';
 
             console.log(currentStep);
         }
 
-
+        if (currentStep === 4) {
+            document.querySelector('.next-button').classList.add('active-button');
+            document.querySelector('.next-button').classList.remove('disabled-button');
+            document.querySelector('.submit-button').classList.add('disabled-button');
+            document.querySelector('.submit-button').classList.remove('active-button');
+        }
     }
 }
 
@@ -58,7 +63,8 @@ function nextStep() {
         // Оновлюємо клас активного кроку
         const steps = document.querySelectorAll('.progress-step');
         const lines = document.querySelectorAll('.progress-line');
-        const buttonBack = document.querySelectorAll('.disabled-back-button');
+        const buttonBack = document.querySelectorAll('.disabled-button');
+        const nextButton = document.querySelectorAll('.active-button');
         const buttonsContainer = document.querySelectorAll('.buttons-container');
         const nextStepBlock = document.querySelectorAll('.disabled-block');
         const showStepBlock = document.querySelectorAll('.active-block');
@@ -74,11 +80,19 @@ function nextStep() {
         nextStepBlock[currentStep - 1].classList.remove('disabled-block');
 
         console.log(currentStep);
-        // Додаємо active-back-button клас до кнопки Назад
+        // Додаємо active-button клас до кнопки Назад
         if (buttonBack) {
-            buttonBack[0].classList.add('active-back-button');
+            buttonBack[0].classList.add('active-button');
             buttonsContainer[0].style.justifyContent = 'space-between';
         }
         currentStep++;
+
+        if (currentStep === 5) {
+            nextButton[1].classList.remove('active-button');
+            nextButton[1].classList.add('disabled-button');
+            buttonBack[1].classList.remove('disabled-button');
+            buttonBack[1].classList.add('active-button');
+
+        }
     }
 }

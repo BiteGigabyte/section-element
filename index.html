@@ -102,11 +102,11 @@
             border-radius: 5px;
         }
 
-        .disabled-back-button {
+        .disabled-button {
             display: none;
         }
 
-        .active-back-button {
+        .active-button {
             display: block;
         }
 
@@ -243,8 +243,9 @@
 
 
         <div class="buttons-container">
-            <button type="button" class="disabled-back-button" onclick="prevStep()">Назад</button>
-            <button type="button" onclick="nextStep()">Далі</button>
+            <button type="button" class="disabled-button" onclick="prevStep()">Назад</button>
+            <button type="button" class="active-button next-button" onclick="nextStep()">Далі</button>
+            <button type="button" class="disabled-button submit-button">Отправить</button>
         </div>
     </form>
 
