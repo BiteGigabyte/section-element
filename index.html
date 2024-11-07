@@ -140,83 +140,113 @@
         </div>
     </div>
 
-<form>
+    <form>
 
-    <div id="step-1" class="step active-block">
-        <h2>С каким устройством проблемы?</h2>
-        <button type="button" class="active-input-step-1" onclick="chooseLabel(this, 1)"><img src="step1_images/comp.png" alt="comp">Персональный
-            компьютер
-        </button>
-        <button type="button" onclick="chooseLabel(this, 1)"><img src="step1_images/laptop.png" alt="laptop">Ноутбук</button>
-        <button type="button" onclick="chooseLabel(this, 1)"><img src="step1_images/macbook.DM3n9.png" alt="macbook">Макбук</button>
-        <button type="button" onclick="chooseLabel(this, 1)"><img src="step1_images/imac.png" alt="imac">Моноблоки</button>
-        <!--            <input class="active-input-step-1" type="button" name="option1" value="Option 1A" checked onclick="chooseLabel(this, 1)">-->
-        <!--            <input type="button" name="option2" value="Option 1B" onclick="chooseLabel(this, 1)">-->
-        <!--            <input type="button" name="option3" value="Option 1C" onclick="chooseLabel(this, 1)">-->
-        <!--            <input type="button" name="option4" value="Option 1D" onclick="chooseLabel(this, 1)">-->
-    </div>
-
-    <div id="step-2" class="step disabled-block">
-        <h2>Какие внешние признаки у проблемы?</h2>
-        <div>
-            <button type="button" class="active-input-step-2" name="option2" value="Option 2A" onclick="chooseLabel(this, 2)">
-                <img src="step2_images/off.svg" alt="off">Не включается
+        <div id="step-1" class="step active-block">
+            <h2>С каким устройством проблемы?</h2>
+            <button type="button" name="Персональный_компьютер" class="active-input-step-1" onclick="chooseLabel(this, 1)"><img
+                    src="step1_images/comp.png" alt="comp">Персональный
+                компьютер
             </button>
-            <button type="button" name="option2" value="Option 2B" onclick="chooseLabel(this, 2)"><img src="step2_images/restart.svg"
-                                                                                         alt="restart">Перегружается
+            <button type="button" name="Ноутбук" onclick="chooseLabel(this, 1)"><img src="step1_images/laptop.png" alt="laptop">Ноутбук
             </button>
-            <button type="button" name="option2" value="Option 2C" onclick="chooseLabel(this, 2)"><img
-                    src="step2_images/none_image.svg" alt="none">Не загружается
+            <button type="button" name="Макбук" onclick="chooseLabel(this, 1)"><img src="step1_images/macbook.DM3n9.png"
+                                                                      alt="macbook">Макбук
             </button>
-            <button type="button" name="option2" value="Option 2D" onclick="chooseLabel(this, 2)"><img
-                    src="step2_images/image_brocken.svg" alt="broken">Тормозит
+            <button type="button" name="Моноблоки" onclick="chooseLabel(this, 1)"><img src="step1_images/imac.png" alt="imac">Моноблоки
             </button>
-            <button type="button" name="option2" value="Option 2E" onclick="chooseLabel(this, 2)"><img src="step2_images/water.svg"
-                                                                                         alt="water">Перегревается
-            </button>
-            <button type="button" name="option2" value="Option 2F" onclick="chooseLabel(this, 2)"><img src="step2_images/noise.svg"
-                                                                                         alt="moise">Ошибки в системе
-            </button>
-            <button type="button" name="option2" value="Option 2G" onclick="chooseLabel(this, 2)"><img src="step2_images/keyboard.svg"
-                                                                                         alt="keyboard">Пропал интернет
-            </button>
-            <input type="text" name="option2" value="Впишите своё" onclick="chooseLabel(this, 2)">
+            <!--            <input class="active-input-step-1" type="button" name="option1" value="Option 1A" checked onclick="chooseLabel(this, 1)">-->
+            <!--            <input type="button" name="option2" value="Option 1B" onclick="chooseLabel(this, 1)">-->
+            <!--            <input type="button" name="option3" value="Option 1C" onclick="chooseLabel(this, 1)">-->
+            <!--            <input type="button" name="option4" value="Option 1D" onclick="chooseLabel(this, 1)">-->
         </div>
-    </div>
 
-    <div id="step-3" class="step disabled-block">
-        <h2>Вы знаете, что конкретно вышло из строя?</h2>
-        <div>
-            <button class="active-input-step-3" type="button" name="option3" value="Option 3A" onclick="chooseLabel(this, 3)">
-                <img src="step3_images/ar-6.svg" alt="ar-6">Блок питания</button>
-                <button type="button" name="option3" value="Option 3A" onclick="chooseLabel(this, 3)"><img src="step3_images/ar-6.svg" alt="ar-6">Сбой в Windows / MacOS</button>
-                <button type="button" name="option3" value="Option 3A" onclick="chooseLabel(this, 3)"><img src="step3_images/ar-6.svg" alt="ar-6">Вирусное заражение</button>
-                <button type="button" name="option3" value="Option 3A" onclick="chooseLabel(this, 3)"><img src="step3_images/ar-6.svg" alt="ar-6">Требуется чистка</button>
-                <button type="button" name="option3" value="Option 3A" onclick="chooseLabel(this, 3)"><img src="step3_images/ar-6.svg" alt="ar-6">Сбой в настройках ОС</button>
-                <button type="button" name="option3" value="Option 3A" onclick="chooseLabel(this, 3)"><img src="step3_images/ar-6.svg" alt="ar-6">Жесткий диск</button>
-                <button type="button" name="option3" value="Option 3A" onclick="chooseLabel(this, 3)"><img src="step3_images/ar-6.svg" alt="ar-6">Не знаю</button>
+        <div id="step-2" class="step disabled-block">
+            <h2>Какие внешние признаки у проблемы?</h2>
+            <div>
+                <button type="button" name="Не_включается" class="active-input-step-2" name="option2" value="Option 2A"
+                        onclick="chooseLabel(this, 2)">
+                    <img src="step2_images/off.svg" alt="off">Не включается
+                </button>
+                <button type="button" name="Перегружается" value="Option 2B" onclick="chooseLabel(this, 2)"><img
+                        src="step2_images/restart.svg"
+                        alt="restart">Перегружается
+                </button>
+                <button type="button" name="Не_загружается" value="Option 2C" onclick="chooseLabel(this, 2)"><img
+                        src="step2_images/none_image.svg" alt="none">Не загружается
+                </button>
+                <button type="button" name="Тормозит" value="Option 2D" onclick="chooseLabel(this, 2)"><img
+                        src="step2_images/image_brocken.svg" alt="broken">Тормозит
+                </button>
+                <button type="button" name="Перегревается" value="Option 2E" onclick="chooseLabel(this, 2)"><img
+                        src="step2_images/water.svg"
+                        alt="water">Перегревается
+                </button>
+                <button type="button" name="Ошибки_в_системе" value="Option 2F" onclick="chooseLabel(this, 2)"><img
+                        src="step2_images/noise.svg"
+                        alt="moise">Ошибки в системе
+                </button>
+                <button type="button" name="Пропал_интернет" value="Option 2G" onclick="chooseLabel(this, 2)"><img
+                        src="step2_images/keyboard.svg"
+                        alt="keyboard">Пропал интернет
+                </button>
+                <input type="text" name="option2?" value="Впишите своё" onclick="chooseLabel(this, 2)">
+            </div>
         </div>
-    </div>
 
-    <div id="step-4" class="step disabled-block">
-        <h2>Сколько лет вашему устройству?</h2>
-        <div>
-            <button class="active-input-step-4" type="button" name="option4" value="Option 4A" onclick="chooseLabel(this, 4)"><img src="step3_images/ar-6.svg" alt="ar-6">ДО 2-Х ЛЕТ</button>
-            <button type="button" name="option4" value="Option 4A" onclick="chooseLabel(this, 4)"><img src="step3_images/ar-6.svg" alt="ar-6">ОТ 2-Х ДО 5 ЛЕТ</button>
-            <button type="button" name="option4" value="Option 4A" onclick="chooseLabel(this, 4)"><img src="step3_images/ar-6.svg" alt="ar-6">БОЛЬШЕ 5 ЛЕТ</button>
+        <div id="step-3" class="step disabled-block">
+            <h2>Вы знаете, что конкретно вышло из строя?</h2>
+            <div>
+                <button class="active-input-step-3" type="button" name="Блок_питания" value="Option 3A"
+                        onclick="chooseLabel(this, 3)">
+                    <img src="step3_images/ar-6.svg" alt="ar-6">Блок питания
+                </button>
+                <button type="button" name="Сбой_в_Windows_/_MacOS" value="Option 3A" onclick="chooseLabel(this, 3)"><img
+                        src="step3_images/ar-6.svg" alt="ar-6">Сбой в Windows / MacOS
+                </button>
+                <button type="button" name="Вирусное_заражение" value="Option 3A" onclick="chooseLabel(this, 3)"><img
+                        src="step3_images/ar-6.svg" alt="ar-6">Вирусное заражение
+                </button>
+                <button type="button" name="Требуется_чистка" value="Option 3A" onclick="chooseLabel(this, 3)"><img
+                        src="step3_images/ar-6.svg" alt="ar-6">Требуется чистка
+                </button>
+                <button type="button" name="Сбой_в_настройках_ОС" value="Option 3A" onclick="chooseLabel(this, 3)"><img
+                        src="step3_images/ar-6.svg" alt="ar-6">Сбой в настройках ОС
+                </button>
+                <button type="button" name="Жесткий_диск" value="Option 3A" onclick="chooseLabel(this, 3)"><img
+                        src="step3_images/ar-6.svg" alt="ar-6">Жесткий диск
+                </button>
+                <button type="button" name="Не_знаю" value="Option 3A" onclick="chooseLabel(this, 3)"><img
+                        src="step3_images/ar-6.svg" alt="ar-6">Не знаю
+                </button>
+            </div>
         </div>
-    </div>
 
-    <div id="step-5" class="step disabled-block">
-        <h2>Последний шаг, перед тем, как мы рассчитаем стоимость ремонта</h2>
-    </div>
+        <div id="step-4" class="step disabled-block">
+            <h2>Сколько лет вашему устройству?</h2>
+            <div>
+                <button class="active-input-step-4" type="button" name="ДО_2-Х_ЛЕТ" value="Option 4A"
+                        onclick="chooseLabel(this, 4)"><img src="step3_images/ar-6.svg" alt="ar-6">ДО 2-Х ЛЕТ
+                </button>
+                <button type="button" name="ОТ_2-Х_ДО_5_ЛЕТ" value="Option 4A" onclick="chooseLabel(this, 4)"><img
+                        src="step3_images/ar-6.svg" alt="ar-6">ОТ 2-Х ДО 5 ЛЕТ
+                </button>
+                <button type="button" name="БОЛЬШЕ_5_ЛЕТ" value="Option 4A" onclick="chooseLabel(this, 4)"><img
+                        src="step3_images/ar-6.svg" alt="ar-6">БОЛЬШЕ 5 ЛЕТ
+                </button>
+            </div>
+        </div>
+
+        <div id="step-5" class="step disabled-block">
+            <h2>Последний шаг, перед тем, как мы рассчитаем стоимость ремонта</h2>
+        </div>
 
 
-    <div class="buttons-container">
-        <button type="button" class="disabled-back-button" onclick="prevStep()">Назад</button>
-        <button type="button" onclick="nextStep()">Далі</button>
-    </div>
-</form>
+        <div class="buttons-container">
+            <button type="button" class="disabled-back-button" onclick="prevStep()">Назад</button>
+            <button type="button" onclick="nextStep()">Далі</button>
+        </div>
+    </form>
 
 </div>
 
