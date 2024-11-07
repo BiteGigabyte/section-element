@@ -1,10 +1,10 @@
 let currentStep = 1;
 
 let mySelectedChoise = {
-    step1: 'step1',
-    step2: 'step2',
-    step3: 'step3',
-    step4: 'step4',
+    step1: 'Персональный_компьютер',
+    step2: 'Не_включается',
+    step3: 'Блок_питания',
+    step4: 'ДО_2-Х_ЛЕТ',
 }
 
 
