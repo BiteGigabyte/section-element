@@ -30,11 +30,8 @@ function chooseLabel(button, number) {
     console.log(`step ${number}`);
 }
 
-function saveDataInput(input) {
-    const activeInput = document.querySelectorAll(`.active-input-step-${number}`);
-    activeInput[0].name = input.value;
-
-    console.log(activeInput[0].name + ' activeInput');
+function sendForm () {
+    console.log(mySelectedChoise);
 }
 
 function prevStep() {
