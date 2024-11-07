@@ -1,12 +1,40 @@
 let currentStep = 1;
 
+let mySelectedChoise = {
+    step1: 'step1',
+    step2: 'step2',
+    step3: 'step3',
+    step4: 'step4',
+}
+
+
+const inputElement = document.getElementById('input-step-2');
+
+inputElement.addEventListener('input', (event) => {
+    mySelectedChoise.step2 = event.target.value
+
+    console.log('Змінено текст:', event.target.value);
+    console.log(mySelectedChoise.step2 + ' TEXT');
+});
+
+
 function chooseLabel(button, number) {
     const activeInput = document.querySelectorAll(`.active-input-step-${number}`);
     activeInput[0].classList.remove(`active-input-step-${number}`);
     button.classList.add(`active-input-step-${number}`);
 
-    console.log(`step ${number}`);
+    mySelectedChoise[`step${number}`] = button.name;
 
+    console.log('choise ' + mySelectedChoise[`step${number}`]);
+
+    console.log(`step ${number}`);
+}
+
+function saveDataInput(input) {
+    const activeInput = document.querySelectorAll(`.active-input-step-${number}`);
+    activeInput[0].name = input.value;
+
+    console.log(activeInput[0].name + ' activeInput');
 }
 
 function prevStep() {
@@ -92,7 +120,7 @@ function nextStep() {
             nextButton[1].classList.add('disabled-button');
             buttonBack[1].classList.remove('disabled-button');
             buttonBack[1].classList.add('active-button');
-
         }
     }
+
 }
