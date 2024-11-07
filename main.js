@@ -51,7 +51,7 @@ function nextStep() {
         console.log(currentStep);
         // Додаємо active-back-button клас до кнопки Назад
         if (buttonBack) {
-            buttonBack[0].classList.add('active-back-button')
+            buttonBack[0].classList.add('active-back-button');
             buttonsContainer[0].style.justifyContent = 'space-between';
         }
         currentStep++;
