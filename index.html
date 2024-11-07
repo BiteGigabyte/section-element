@@ -66,6 +66,16 @@
             justify-content: center;
         }
 
+
+        .disabled-block {
+            display: none;
+        }
+
+        .active-block {
+            display: block;
+        }
+
+
         button {
             margin-top: 20px;
             padding: 10px 20px;
@@ -115,11 +125,70 @@
     </div>
 
 
+    <div id="step-1" class="step active-block">
+        <h2>Step 1</h2>
+        <label>
+            Choose Option 1:
+            <input type="radio" name="option1" value="Option 1A" checked> Option 1A
+            <input type="radio" name="option1" value="Option 1B"> Option 1B
+            <input type="radio" name="option1" value="Option 1B"> Option 1C
+            <input type="radio" name="option1" value="Option 1B"> Option 1D
+        </label>
+    </div>
+
+    <div id="step-2" class="step disabled-block">
+        <h2>Step 2</h2>
+        <label>
+            Choose Option 2:
+            <input type="radio" name="option2" value="Option 2A" checked> Option 2A
+            <input type="radio" name="option2" value="Option 2A"> Option 2A
+            <input type="radio" name="option2" value="Option 2A"> Option 2B
+            <input type="radio" name="option2" value="Option 2A"> Option 2C
+            <input type="radio" name="option2" value="Option 2A"> Option 2D
+            <input type="radio" name="option2" value="Option 2A"> Option 2E
+            <input type="radio" name="option2" value="Option 2A"> Option 2F
+            <input type="radio" name="option2" value="Option 2A"> Option 2G
+        </label>
+    </div>
+
+    <div id="step-3" class="step disabled-block">
+        <h2>Step 3</h2>
+        <label>
+            Choose Option 3:
+            <input type="radio" name="option3" value="Option 3A" checked> Option 3A
+            <input type="radio" name="option3" value="Option 3A"> Option 3A
+            <input type="radio" name="option3" value="Option 3A"> Option 3B
+        </label>
+    </div>
+
+    <div id="step-4" class="step disabled-block">
+        <h2>Step 4</h2>
+        <label>
+            Choose Option 4:
+            <input type="radio" name="option4" value="Option 4A" checked> Option 4A
+            <input type="radio" name="option4" value="Option 4A"> Option 4A
+            <input type="radio" name="option4" value="Option 4A"> Option 4B
+            <input type="radio" name="option4" value="Option 4A"> Option 4C
+            <input type="radio" name="option4" value="Option 4A"> Option 4D
+        </label>
+    </div>
+
+    <div id="step-5" class="step disabled-block">
+        <h2>Step 5</h2>
+        <label>
+            Choose Option 5:
+            <input type="radio" name="option5" value="Option 5A" checked> Option 5A
+            <input type="radio" name="option5" value="Option 5A"> Option 5B
+            <input type="radio" name="option5" value="Option 5A"> Option 5C
+        </label>
+    </div>
+
 
     <div class="buttons-container">
         <button class="disabled-back-button" onclick="prevStep()">Назад</button>
         <button onclick="nextStep()">Далі</button>
     </div>
+
 </div>
 
 <script src="main.js"></script>

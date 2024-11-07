@@ -5,7 +5,8 @@ function prevStep() {
     const lines = document.querySelectorAll('.progress-line');
     let buttonBack = document.querySelectorAll('.disabled-back-button');
     const buttonsContainer = document.querySelectorAll('.buttons-container');
-
+    const nextStepBlock = document.querySelectorAll('.disabled-block');
+    const showStepBlock = document.querySelectorAll('.active-block');
 
     if (currentStep > 1) {
         currentStep--;
@@ -19,8 +20,13 @@ function prevStep() {
     // if (buttonBack) {
     //     buttonBack[0].classList.add('active-back-button')
     // }
+        showStepBlock[0].classList.add('disabled-block');
+        showStepBlock[0].classList.remove('active-block');
+        nextStepBlock[currentStep - 1].classList.add('active-block');
+        nextStepBlock[currentStep - 1].classList.remove('disabled-block');
 
-    console.log(currentStep);
+
+        console.log(currentStep);
 
         if (currentStep === 1) {
             // currentStep--;
@@ -33,6 +39,8 @@ function prevStep() {
 
             console.log(currentStep);
         }
+
+
     }
 }
 
@@ -43,11 +51,18 @@ function nextStep() {
         const lines = document.querySelectorAll('.progress-line');
         const buttonBack = document.querySelectorAll('.disabled-back-button');
         const buttonsContainer = document.querySelectorAll('.buttons-container');
-
+        const nextStepBlock = document.querySelectorAll('.disabled-block');
+        const showStepBlock = document.querySelectorAll('.active-block');
         // Додаємо клас "active" для наступного кроку
         steps[currentStep].classList.add('active');
         // Додаємо клас "active" для лінії між кроками
-            lines[currentStep - 1].classList.add('active');
+        lines[currentStep - 1].classList.add('active');
+
+        showStepBlock[0].classList.add('disabled-block');
+        showStepBlock[0].classList.remove('active-block');
+        nextStepBlock[currentStep - 1].classList.add('active-block');
+        nextStepBlock[currentStep - 1].classList.remove('disabled-block');
+
         console.log(currentStep);
         // Додаємо active-back-button клас до кнопки Назад
         if (buttonBack) {
