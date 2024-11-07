@@ -121,3 +121,82 @@ function nextStep() {
     }
 
 }
+
+// function nextStep() {
+//     if (currentStep < 5) {
+//         // Вибираємо всі кроки та лінії
+//         const steps = document.querySelectorAll('.progress-step');
+//         const lines = document.querySelectorAll('.progress-line');
+//
+//         // Поточний і наступний блоки
+//         const currentStepBlock = document.getElementById(`step-${currentStep}`);
+//         const nextStepBlock = document.getElementById(`step-${currentStep + 1}`);
+//
+//         // Зміна видимості блоків
+//         currentStepBlock.classList.remove('active-block');
+//         currentStepBlock.classList.add('disabled-block');
+//         nextStepBlock.classList.remove('disabled-block');
+//         nextStepBlock.classList.add('active-block');
+//
+//         // Оновлення класів для прогрес-лінії та кроків
+//         steps[currentStep].classList.add('active');
+//         if (currentStep - 1 >= 0) {
+//             lines[currentStep - 1].classList.add('active');
+//         }
+//
+//         // Оновлення кнопок
+//         document.querySelector('.disabled-button').classList.remove('disabled-button');
+//         document.querySelector('.disabled-button').classList.add('active-button');
+//
+//         // Кнопка "Отправить" на останньому кроці
+//         if (currentStep === 4) {
+//             document.querySelector('.next-button').classList.add('disabled-button');
+//             document.querySelector('.next-button').classList.remove('active-button');
+//             document.querySelector('.submit-button').classList.remove('disabled-button');
+//             document.querySelector('.submit-button').classList.add('active-button');
+//         }
+//
+//         // Переходимо до наступного кроку
+//         currentStep++;
+//     }
+// }
+//
+// function prevStep() {
+//     if (currentStep > 1) {
+//         const steps = document.querySelectorAll('.progress-step');
+//         const lines = document.querySelectorAll('.progress-line');
+//
+//         // Поточний і попередній блоки
+//         const currentStepBlock = document.getElementById(`step-${currentStep}`);
+//         const prevStepBlock = document.getElementById(`step-${currentStep - 1}`);
+//
+//         // Зміна видимості блоків
+//         currentStepBlock.classList.remove('active-block');
+//         currentStepBlock.classList.add('disabled-block');
+//         prevStepBlock.classList.remove('disabled-block');
+//         prevStepBlock.classList.add('active-block');
+//
+//         // Видалення класів активного кроку та лінії
+//         steps[currentStep - 1].classList.remove('active');
+//         if (currentStep - 2 >= 0) {
+//             lines[currentStep - 2].classList.remove('active');
+//         }
+//
+//         // Оновлення кнопок
+//         if (currentStep === 2) {
+//             document.querySelector('.active-button').classList.remove('active-button');
+//             document.querySelector('.active-button').classList.add('disabled-button');
+//         }
+//
+//         // Кнопка "Далее" на 4 кроці
+//         if (currentStep === 5) {
+//             document.querySelector('.submit-button').classList.add('disabled-button');
+//             document.querySelector('.submit-button').classList.remove('active-button');
+//             document.querySelector('.next-button').classList.remove('disabled-button');
+//             document.querySelector('.next-button').classList.add('active-button');
+//         }
+//
+//         // Повертаємось до попереднього кроку
+//         currentStep--;
+//     }
+// }
