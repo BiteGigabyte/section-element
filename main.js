@@ -1,5 +1,12 @@
 let currentStep = 1;
 
+function chooseLabel(button, number) {
+    const activeInput = document.querySelectorAll(`.active-input-step-${number}`);
+    activeInput[0].classList.remove(`active-input-step-${number}`);
+    button.classList.add(`active-input-step-${number}`);
+
+}
+
 function prevStep() {
     const steps = document.querySelectorAll('.progress-step');
     const lines = document.querySelectorAll('.progress-line');
@@ -53,6 +60,7 @@ function nextStep() {
         const buttonsContainer = document.querySelectorAll('.buttons-container');
         const nextStepBlock = document.querySelectorAll('.disabled-block');
         const showStepBlock = document.querySelectorAll('.active-block');
+
         // Додаємо клас "active" для наступного кроку
         steps[currentStep].classList.add('active');
         // Додаємо клас "active" для лінії між кроками
