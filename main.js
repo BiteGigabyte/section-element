@@ -11,7 +11,7 @@ let mySelectedChoise = {
 const inputElement = document.getElementById('input-step-2');
 
 inputElement.addEventListener('input', (event) => {
-    mySelectedChoise.step2 = event.target.value
+    mySelectedChoise.step2 = `${event.target.value}`;
 
     console.log('Змінено текст:', event.target.value);
     console.log(mySelectedChoise.step2 + ' TEXT');
