@@ -46,7 +46,7 @@
             width: calc(85% - 20px);
 
             border: 2px solid white;
-            border-radius: 5px;
+            border-radius: 10px;
             /*padding: 0 25px 25px 25px;*/
             padding: 0;
             margin: 0 20px 20px 20px;
@@ -470,6 +470,10 @@
                 padding-top: 50px;
             }
 
+            #step-1 div {
+                font-size: 90%;
+            }
+
 
             .step-2-div button {
                 width: calc(100% - 15px);
@@ -487,10 +491,18 @@
                 padding-top: 50px;
             }
 
+            #step-2 div {
+                font-size: 90%;
+            }
+
 
             #step-3 h2 {
                 padding-top: 50px;
                 width: 72vw;
+            }
+
+            #step-3 div {
+                font-size: 90%;
             }
 
 
@@ -501,6 +513,8 @@
 
             #step-4 div {
                 width: 100%;
+
+                font-size: 90%;
             }
 
             #step-4 h2 {
@@ -605,7 +619,7 @@
             <div id="step-2" class="step disabled-block">
                 <h2>Какие внешние признаки у проблемы?</h2>
                 <div class="step-2-div">
-                    <button type="button" name="Не_включается" class="active-input-step-2 step-2-button" name="option2"
+                    <button type="button" name="Не_включается" class="active-input-step-2 step-2-button"
                             value="Option 2A"
                             onclick="chooseLabel(this, 2)">
                         <img src="step2_images/off.svg" alt="off">Не включается
