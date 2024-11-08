@@ -303,7 +303,48 @@
             height: 64.1px;
         }
 
-        .active-input-step-1 {
+        #step-4 {
+            width: calc(100% - 30px);
+        }
+
+        #step-4 div {
+            width: 73%;
+
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            margin-left: auto;
+            margin-right: auto;
+
+
+        }
+
+        #step-4 h2 {
+            text-align: center;
+        }
+
+        .step-4-button {
+            background-color: #F5F5F5;
+            border-color: #E1E1E1;
+
+            color: black;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            width: calc(50% - 15px);
+        }
+
+        .step-4-button img {
+            padding: 10px 20px 10px 10px;
+        }
+
+
+            .active-input-step-1 {
             background-color: #CBFBBA;
         }
 
@@ -501,13 +542,13 @@
             <div id="step-4" class="step disabled-block">
                 <h2>Сколько лет вашему устройству?</h2>
                 <div>
-                    <button class="active-input-step-4" type="button" name="ДО_2-Х_ЛЕТ" value="Option 4A"
+                    <button class="active-input-step-4 step-4-button" type="button" name="ДО_2-Х_ЛЕТ" value="Option 4A"
                             onclick="chooseLabel(this, 4)"><img src="step3_images/ar-6.svg" alt="ar-6">ДО 2-Х ЛЕТ
                     </button>
-                    <button type="button" name="ОТ_2-Х_ДО_5_ЛЕТ" value="Option 4A" onclick="chooseLabel(this, 4)"><img
+                    <button class="step-4-button" type="button" name="ОТ_2-Х_ДО_5_ЛЕТ" value="Option 4A" onclick="chooseLabel(this, 4)"><img
                             src="step3_images/ar-6.svg" alt="ar-6">ОТ 2-Х ДО 5 ЛЕТ
                     </button>
-                    <button type="button" name="БОЛЬШЕ_5_ЛЕТ" value="Option 4A" onclick="chooseLabel(this, 4)"><img
+                    <button class="step-4-button" type="button" name="БОЛЬШЕ_5_ЛЕТ" value="Option 4A" onclick="chooseLabel(this, 4)"><img
                             src="step3_images/ar-6.svg" alt="ar-6">БОЛЬШЕ 5 ЛЕТ
                     </button>
                 </div>
