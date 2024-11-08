@@ -72,10 +72,7 @@ function prevStep() {
         steps[currentStep].classList.remove('active');
         // Додаємо клас "active" для лінії між кроками
         lines[currentStep - 1].classList.remove('active');
-        // Додаємо active-button клас до кнопки Назад
-        // if (buttonBack) {
-        //     buttonBack[0].classList.add('active-button')
-        // }
+
         showStepBlock[0].classList.add('disabled-block');
         showStepBlock[0].classList.remove('active-block');
         nextStepBlock[currentStep - 1].classList.add('active-block');
