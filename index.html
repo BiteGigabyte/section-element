@@ -16,9 +16,9 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 50vh;
             background-color: #f4f4f4;
-            min-height: 591.4px;
+            /*min-height: 591.4px;*/
         }
 
         button {
@@ -27,7 +27,8 @@
         }
 
         .main-div {
-            min-height: 595.5px;
+            /*height: auto;*/
+            /*min-height: 595.5px;*/
             width: 100%;
 
             display: flex;
@@ -44,19 +45,16 @@
 
         .selection-element {
             width: calc(100% - 10px);
-            /*height: 75vh;*/
 
             border: 2px solid white;
             border-radius: 5px;
             padding: 25px;
-            margin: 10px;
+            margin: 20px;
 
             display: flex;
             flex-direction: column;
-            /*justify-content: center;*/
-            align-items: center;
 
-            /*min-height: 520.2px;*/
+            align-items: center;
 
             background-color: white;
         }
@@ -265,6 +263,42 @@
             /*box-shadow: inset 0 0 0 10px #CBFBBA;*/
         }
 
+        #step-3 {
+            width: 100%;
+            height: auto;
+
+            /*display: flex;*/
+            /*justify-content: center;*/
+            /*align-items: center;*/
+            /*flex-direction: column;*/
+        }
+
+        #step-3 > div {
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #step-3 > h2 {
+            text-align: center;
+        }
+
+        .step-3-button {
+            background-color: #F5F5F5;
+            border-color: #E1E1E1;
+
+            color: black;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            width: 72vw;
+            height: 64.1px;
+        }
+
         .active-input-step-1 {
             background-color: #CBFBBA;
         }
@@ -431,30 +465,30 @@
             <div id="step-3" class="step disabled-block">
                 <h2>Вы знаете, что конкретно вышло из строя?</h2>
                 <div>
-                    <button class="active-input-step-3" type="button" name="Блок_питания" value="Option 3A"
+                    <button class="active-input-step-3 step-3-button" type="button" name="Блок_питания" value="Option 3A"
                             onclick="chooseLabel(this, 3)">
                         <img src="step3_images/ar-6.svg" alt="ar-6">Блок питания
                     </button>
-                    <button type="button" name="Сбой_в_Windows_/_MacOS" value="Option 3A"
+                    <button class="step-3-button" type="button" name="Сбой_в_Windows_/_MacOS" value="Option 3A"
                             onclick="chooseLabel(this, 3)">
                         <img
                                 src="step3_images/ar-6.svg" alt="ar-6">Сбой в Windows / MacOS
                     </button>
-                    <button type="button" name="Вирусное_заражение" value="Option 3A" onclick="chooseLabel(this, 3)">
+                    <button class="step-3-button" type="button" name="Вирусное_заражение" value="Option 3A" onclick="chooseLabel(this, 3)">
                         <img
                                 src="step3_images/ar-6.svg" alt="ar-6">Вирусное заражение
                     </button>
-                    <button type="button" name="Требуется_чистка" value="Option 3A" onclick="chooseLabel(this, 3)"><img
+                    <button class="step-3-button" type="button" name="Требуется_чистка" value="Option 3A" onclick="chooseLabel(this, 3)"><img
                             src="step3_images/ar-6.svg" alt="ar-6">Требуется чистка
                     </button>
-                    <button type="button" name="Сбой_в_настройках_ОС" value="Option 3A" onclick="chooseLabel(this, 3)">
+                    <button class="step-3-button" type="button" name="Сбой_в_настройках_ОС" value="Option 3A" onclick="chooseLabel(this, 3)">
                         <img
                                 src="step3_images/ar-6.svg" alt="ar-6">Сбой в настройках ОС
                     </button>
-                    <button type="button" name="Жесткий_диск" value="Option 3A" onclick="chooseLabel(this, 3)"><img
+                    <button class="step-3-button" type="button" name="Жесткий_диск" value="Option 3A" onclick="chooseLabel(this, 3)"><img
                             src="step3_images/ar-6.svg" alt="ar-6">Жесткий диск
                     </button>
-                    <button type="button" name="Не_знаю" value="Option 3A" onclick="chooseLabel(this, 3)"><img
+                    <button class="step-3-button" type="button" name="Не_знаю" value="Option 3A" onclick="chooseLabel(this, 3)"><img
                             src="step3_images/ar-6.svg" alt="ar-6">Не знаю
                     </button>
                 </div>
