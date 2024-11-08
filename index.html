@@ -81,7 +81,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
             transition: background-color 0.3s, border-color 0.3s;
         }
 
@@ -179,6 +178,7 @@
         #step-2 img {
             padding: 10px 20px 10px 10px;
         }
+
         #step-2 h2 {
             text-align: center;
         }
@@ -193,6 +193,7 @@
 
         .step-2-div button {
             width: calc(25% - 15px);
+            height: 66.6px;
         }
 
         .step-2-button {
@@ -208,7 +209,7 @@
 
         .step-2-div label {
             width: calc(25% - 15px);
-            height: 91.6px;
+            height: 66.6px;
             margin-top: 20px;
 
             border: 0;
@@ -340,6 +341,7 @@
             align-items: center;
 
             width: calc(50% - 15px);
+            height: 65px;
         }
 
         .step-4-button img {
@@ -347,7 +349,7 @@
         }
 
 
-            .active-input-step-1 {
+        .active-input-step-1 {
             background-color: #CBFBBA;
         }
 
@@ -406,6 +408,56 @@
 
             width: 155px;
             height: 48px;
+        }
+
+        @media screen and (max-width: 766px) {
+
+            .progress-step {
+                width: 20px;
+                height: 20px;
+                font-size: 65%;
+            }
+
+            .progress-label {
+                font-size: 60%;
+                    top: 27px;
+            }
+
+
+            #step-1 button {
+                width: calc(100% - 30px);
+            }
+
+
+            .step-2-div button {
+                width: calc(100% - 15px);
+                height: 66.6px;
+            }
+
+            .step-2-div label {
+                width: calc(100% - 15px);
+            }
+
+
+            .step-4-button {
+                width: calc(100% - 15px);
+                height: 62.1px;
+            }
+
+            #step-4 div {
+                width: 100%;
+            }
+        }
+
+        @media screen and (min-width: 590px) and (max-width: 990px) {
+
+            .step-2-div button {
+                width: calc(50% - 15px);
+            }
+
+            .step-2-div label {
+                width: calc(50% - 15px);
+            }
         }
     </style>
 </head>
@@ -513,7 +565,8 @@
             <div id="step-3" class="step disabled-block">
                 <h2>Вы знаете, что конкретно вышло из строя?</h2>
                 <div>
-                    <button class="active-input-step-3 step-3-button" type="button" name="Блок_питания" value="Option 3A"
+                    <button class="active-input-step-3 step-3-button" type="button" name="Блок_питания"
+                            value="Option 3A"
                             onclick="chooseLabel(this, 3)">
                         <img src="step3_images/ar-6.svg" alt="ar-6">Блок питания
                     </button>
@@ -522,21 +575,26 @@
                         <img
                                 src="step3_images/ar-6.svg" alt="ar-6">Сбой в Windows / MacOS
                     </button>
-                    <button class="step-3-button" type="button" name="Вирусное_заражение" value="Option 3A" onclick="chooseLabel(this, 3)">
+                    <button class="step-3-button" type="button" name="Вирусное_заражение" value="Option 3A"
+                            onclick="chooseLabel(this, 3)">
                         <img
                                 src="step3_images/ar-6.svg" alt="ar-6">Вирусное заражение
                     </button>
-                    <button class="step-3-button" type="button" name="Требуется_чистка" value="Option 3A" onclick="chooseLabel(this, 3)"><img
+                    <button class="step-3-button" type="button" name="Требуется_чистка" value="Option 3A"
+                            onclick="chooseLabel(this, 3)"><img
                             src="step3_images/ar-6.svg" alt="ar-6">Требуется чистка
                     </button>
-                    <button class="step-3-button" type="button" name="Сбой_в_настройках_ОС" value="Option 3A" onclick="chooseLabel(this, 3)">
+                    <button class="step-3-button" type="button" name="Сбой_в_настройках_ОС" value="Option 3A"
+                            onclick="chooseLabel(this, 3)">
                         <img
                                 src="step3_images/ar-6.svg" alt="ar-6">Сбой в настройках ОС
                     </button>
-                    <button class="step-3-button" type="button" name="Жесткий_диск" value="Option 3A" onclick="chooseLabel(this, 3)"><img
+                    <button class="step-3-button" type="button" name="Жесткий_диск" value="Option 3A"
+                            onclick="chooseLabel(this, 3)"><img
                             src="step3_images/ar-6.svg" alt="ar-6">Жесткий диск
                     </button>
-                    <button class="step-3-button" type="button" name="Не_знаю" value="Option 3A" onclick="chooseLabel(this, 3)"><img
+                    <button class="step-3-button" type="button" name="Не_знаю" value="Option 3A"
+                            onclick="chooseLabel(this, 3)"><img
                             src="step3_images/ar-6.svg" alt="ar-6">Не знаю
                     </button>
                 </div>
@@ -548,10 +606,12 @@
                     <button class="active-input-step-4 step-4-button" type="button" name="ДО_2-Х_ЛЕТ" value="Option 4A"
                             onclick="chooseLabel(this, 4)"><img src="step3_images/ar-6.svg" alt="ar-6">ДО 2-Х ЛЕТ
                     </button>
-                    <button class="step-4-button" type="button" name="ОТ_2-Х_ДО_5_ЛЕТ" value="Option 4A" onclick="chooseLabel(this, 4)"><img
+                    <button class="step-4-button" type="button" name="ОТ_2-Х_ДО_5_ЛЕТ" value="Option 4A"
+                            onclick="chooseLabel(this, 4)"><img
                             src="step3_images/ar-6.svg" alt="ar-6">ОТ 2-Х ДО 5 ЛЕТ
                     </button>
-                    <button class="step-4-button" type="button" name="БОЛЬШЕ_5_ЛЕТ" value="Option 4A" onclick="chooseLabel(this, 4)"><img
+                    <button class="step-4-button" type="button" name="БОЛЬШЕ_5_ЛЕТ" value="Option 4A"
+                            onclick="chooseLabel(this, 4)"><img
                             src="step3_images/ar-6.svg" alt="ar-6">БОЛЬШЕ 5 ЛЕТ
                     </button>
                 </div>
