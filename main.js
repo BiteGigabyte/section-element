@@ -20,17 +20,39 @@ inputElement.addEventListener('input', (event) => {
 
 function chooseLabel(button, number) {
     const activeInput = document.querySelectorAll(`.active-input-step-${number}`);
+
+
     activeInput[0].classList.remove(`active-input-step-${number}`);
     button.classList.add(`active-input-step-${number}`);
 
     mySelectedChoise[`step${number}`] = button.name;
+
+    const step2label = document.querySelectorAll('.step-2-button');
+    const step2input = document.querySelectorAll('.step-2-input');
+    if (!step2input[0].classList.contains('active-input-step-2')) {
+        step2label[7].classList.remove('step-2-label');
+        step2input[0].classList.remove('step-2-input-colours')
+    }
+
 
     console.log('choise ' + mySelectedChoise[`step${number}`]);
 
     console.log(`step ${number}`);
 }
 
-function sendForm () {
+function step2LabelColors() {
+    const label = document.querySelectorAll('.step-2-button');
+    const input = document.querySelectorAll('.step-2-input');
+
+    if (input[0].classList.contains('active-input-step-2')) {
+        label[7].classList.add('step-2-label');
+        input[0].classList.add('step-2-input-colours')
+
+        console.log(label[7] + 'its label');
+    }
+}
+
+function sendForm() {
     console.log(mySelectedChoise);
 }
 
@@ -44,16 +66,16 @@ function prevStep() {
 
     if (currentStep > 1) {
         currentStep--;
-    // Оновлюємо клас активного кроку
+        // Оновлюємо клас активного кроку
 
-    // Додаємо клас "active" для наступного кроку
-    steps[currentStep].classList.remove('active');
-    // Додаємо клас "active" для лінії між кроками
+        // Додаємо клас "active" для наступного кроку
+        steps[currentStep].classList.remove('active');
+        // Додаємо клас "active" для лінії між кроками
         lines[currentStep - 1].classList.remove('active');
-    // Додаємо active-button клас до кнопки Назад
-    // if (buttonBack) {
-    //     buttonBack[0].classList.add('active-button')
-    // }
+        // Додаємо active-button клас до кнопки Назад
+        // if (buttonBack) {
+        //     buttonBack[0].classList.add('active-button')
+        // }
         showStepBlock[0].classList.add('disabled-block');
         showStepBlock[0].classList.remove('active-block');
         nextStepBlock[currentStep - 1].classList.add('active-block');

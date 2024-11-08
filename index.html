@@ -175,6 +175,10 @@
             padding-bottom: 35px;
         }
 
+        #step-2 h2 {
+            text-align: center;
+        }
+
         .step-2-div {
             /*padding: 20px;*/
             display: flex;
@@ -194,7 +198,7 @@
             color: black;
         }
 
-        .step-2-div div {
+        .step-2-div label {
             width: calc(25% - 15px);
             height: 91.6px;
             margin-top: 20px;
@@ -204,23 +208,54 @@
 
             padding: 10px;
 
-            font-size: 150%;
+            font-size: 180%;
 
-            background-color: #E3E3E3;
+            /*background-color: #F5F5F5;*/
 
-            box-shadow: inset 0 0 0 10px #CBFBBA;
+            /*box-shadow: inset 0 0 0 10px #F5F5F5;*/
 
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        .step-2-div div input {
-            width: auto;
-            height: calc(91.6px - 10px);
+        .step-2-div label:hover {
+            cursor: pointer;
+        }
+
+        .step-2-div label input {
+            color: black;
+
+            width: 90%;
+            /*height: calc(91.6px - 10px);*/
+            height: 42px;
 
             border-radius: 10px;
-            border-color: #CBFBBA;
+            border: 0 solid #F5F5F5;
+
+            background-color: #F5F5F5;
+
+            padding-left: 10px;
+
+            font-size: 58%;
+        }
+
+        .step-2-label {
+            box-shadow: inset 0 0 0 10px #CBFBBA;
+
+            background-color: #CBFBBA;
+        }
+
+        .step-2-input {
+            outline: none;
+        }
+
+        .step-2-input-colours {
+            background-color: #CBFBBA;
+
+            border: 2px solid red;
+            outline: none;
+            /*box-shadow: inset 0 0 0 10px #CBFBBA;*/
         }
 
         .active-input-step-1 {
@@ -378,11 +413,11 @@
                             alt="keyboard">Пропал интернет
                     </button>
                     <!--                <input type="text" id="input-step-2" name="option_2" value="Впишите своё" onclick="chooseLabel(this, 2)" onchange="saveDataInput(this)">-->
-                    <div>
-                        <input class="step-2-button" type="text" id="input-step-2" name="option_2"
+                    <label class="step-2-button">
+                        <input class="step-2-input" type="text" id="input-step-2" name="option_2"
                                placeholder="Впишите своё"
-                               onclick="chooseLabel(this, 2)">
-                    </div>
+                               onclick="chooseLabel(this, 2); step2LabelColors();">
+                    </label>
                 </div>
             </div>
 
