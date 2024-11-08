@@ -85,7 +85,6 @@ function prevStep() {
         console.log(currentStep);
 
         if (currentStep === 1) {
-            // currentStep--;
 
             buttonBack = document.querySelectorAll('.disabled-button');
             buttonBack[0].classList.remove('active-button');
