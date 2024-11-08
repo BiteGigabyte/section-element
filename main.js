@@ -9,7 +9,6 @@ let mySelectedChoise = {
 
 
 const inputElement = document.getElementById('input-step-2');
-
 inputElement.addEventListener('input', (event) => {
     mySelectedChoise.step2 = `${event.target.value}`;
 });
