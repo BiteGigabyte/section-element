@@ -12,9 +12,6 @@ const inputElement = document.getElementById('input-step-2');
 
 inputElement.addEventListener('input', (event) => {
     mySelectedChoise.step2 = `${event.target.value}`;
-
-    console.log('Змінено текст:', event.target.value);
-    console.log(mySelectedChoise.step2 + ' TEXT');
 });
 
 
@@ -33,11 +30,6 @@ function chooseLabel(button, number) {
         step2label[7].classList.remove('step-2-label');
         step2input[0].classList.remove('step-2-input-colours')
     }
-
-
-    console.log('choise ' + mySelectedChoise[`step${number}`]);
-
-    console.log(`step ${number}`);
 }
 
 function step2LabelColors() {
@@ -47,14 +39,10 @@ function step2LabelColors() {
     if (input[0].classList.contains('active-input-step-2')) {
         label[7].classList.add('step-2-label');
         input[0].classList.add('step-2-input-colours')
-
-        console.log(label[7] + 'its label');
     }
 }
 
-function sendForm() {
-    console.log(mySelectedChoise);
-}
+function sendForm() {}
 
 function prevStep() {
     const steps = document.querySelectorAll('.progress-step');
@@ -78,9 +66,6 @@ function prevStep() {
         nextStepBlock[currentStep - 1].classList.add('active-block');
         nextStepBlock[currentStep - 1].classList.remove('disabled-block');
 
-
-        console.log(currentStep);
-
         if (currentStep === 1) {
 
             buttonBack = document.querySelectorAll('.disabled-button');
@@ -88,8 +73,6 @@ function prevStep() {
             buttonBack[0].classList.add('disabled-button');
 
             buttonsContainer[0].style.justifyContent = 'center';
-
-            console.log(currentStep);
         }
 
         if (currentStep === 4) {
@@ -122,7 +105,6 @@ function nextStep() {
         nextStepBlock[currentStep - 1].classList.add('active-block');
         nextStepBlock[currentStep - 1].classList.remove('disabled-block');
 
-        console.log(currentStep);
         // Додаємо active-button клас до кнопки Назад
         if (buttonBack) {
             buttonBack[0].classList.add('active-button');
